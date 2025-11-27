@@ -1,0 +1,43 @@
+<div class="container">
+  <h2>Add Subscriber</h2>
+
+  <form #subscriberForm="ngForm" (ngSubmit)="CreateUser()">
+
+    <div class="form-group">
+      <label>Name</label>
+      <input type="text" [(ngModel)]="name" name="name" required>
+    </div>
+
+    <div class="form-group">
+      <label>Gender</label>
+      <select [(ngModel)]="gender" name="gender">
+        <option value="Male">Male</option>
+        <option value="Female">Female</option>
+      </select>
+    </div>
+
+    <div class="form-group">
+      <label>Subscription Type</label>
+      <select [(ngModel)]="subType" name="subType">
+        <option value="Monthly">Monthly</option>
+        <option value="Yearly">Yearly</option>
+      </select>
+    </div>
+
+    <div class="form-group">
+      <label>Status</label>
+      <select [(ngModel)]="status" name="status">
+        <option value="Active">Active</option>
+        <option value="Inactive">Inactive</option>
+      </select>
+    </div>
+
+    <button type="submit" class="submit-btn">Create User</button>
+  </form>
+
+  <div class="success" *ngIf="showSuccess">
+    Subscriber added successfully!
+  </div>
+</div>
+
+<app-user-list></app-user-list>

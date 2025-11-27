@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FurniShop - Subscribe</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    .newsletter-section {
+      background: linear-gradient(rgba(0,0,0,0.75), rgba(0,0,0,0.75)), url('https://images.unsplash.com/photo-1558618666-fcd25e0f56f7?q=80&w=2000') center/cover no-repeat;
+      padding: 100px 20px;
+      text-align: center;
+      color: white;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    .newsletter-container {
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    .newsletter-title {
+      font-family: 'Playfair Display', serif;
+      font-size: 48px;
+      font-weight: 700;
+      margin-bottom: 20px;
+      color: #b8860b;
+      text-shadow: 0 4px 15px rgba(0,0,0,0.6);
+    }
+
+    .newsletter-subtitle {
+      font-size: 20px;
+      margin-bottom: 15px;
+      opacity: 0.95;
+    }
+
+    .newsletter-text {
+      font-size: 16px;
+      max-width: 600px;
+      margin: 0 auto 40px;
+      line-height: 1.7;
+      opacity: 0.9;
+    }
+
+    .subscribe-form {
+      display: flex;
+      max-width: 600px;
+      margin: 0 auto;
+      box-shadow: 0 15px 35px rgba(0,0,0,0.4);
+      border-radius: 50px;
+      overflow: hidden;
+      background: white;
+    }
+
+    .subscribe-form input {
+      flex: 1;
+      padding: 20px 25px;
+      border: none;
+      font-size: 16px;
+      outline: none;
+      background: transparent;
+      color: #333;
+    }
+
+    .subscribe-form input::placeholder {
+      color: #999;
+    }
+
+    .subscribe-btn {
+      background: linear-gradient(45deg, #b8860b, #ffd700);
+      color: #000;
+      border: none;
+      padding: 0 45px;
+      font-size: 18px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.4s;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+
+    .subscribe-btn:hover {
+      background: linear-gradient(45deg, #ffd700, #b8860b);
+      transform: scale(1.05);
+      box-shadow: 0 10px 25px rgba(184, 134, 11, 0.5);
+    }
+
+    .benefits {
+      display: flex;
+      justify-content: center;
+      gap: 40px;
+      margin-top: 50px;
+      flex-wrap: wrap;
+    }
+
+    .benefit-item {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      font-size: 16px;
+    }
+
+    .benefit-item i {
+      font-size: 28px;
+      color: #b8860b;
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      .newsletter-title { font-size: 36px; }
+      .newsletter-subtitle { font-size: 18px; }
+      .subscribe-form {
+        flex-direction: column;
+        border-radius: 15px;
+      }
+      .subscribe-btn {
+        padding: 18px;
+        border-radius: 0 0 15px 15px;
+      }
+      .benefits {
+        flex-direction: column;
+        gap: 20px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <section class="newsletter-section">
+    <div class="newsletter-container">
+      <h2 class="newsletter-title">Stay Updated with Exclusive Offers</h2>
+      <p class="newsletter-subtitle">Join 50,000+ Happy Customers</p>
+      <p class="newsletter-text">
+        Subscribe to our newsletter and get <strong>15% OFF</strong> your first order + early access to new collections, flash sales & VIP deals!
+      </p>
+
+      <form class="subscribe-form">
+        <input type="email" placeholder="Enter your email address..." required>
+        <button type="submit" class="subscribe-btn">
+          Subscribe Now
+        </button>
+      </form>
+
+      <div class="benefits">
+        <div class="benefit-item">
+          <i class="fas fa-gift"></i>
+          <span>15% Off First Order</span>
+        </div>
+        <div class="benefit-item">
+          <i class="fas fa-truck"></i>
+          <span>Free Shipping Over $99</span>
+        </div>
+        <div class="benefit-item">
+          <i class="fas fa-shield-alt"></i>
+          <span>Secure & Private</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</body>
+</html>

@@ -1,0 +1,56 @@
+<header class="luxury-header">
+  <div class="container">
+
+    <!-- Logo -->
+    <div class="logo">
+      <h1><span>FURNI</span>SHOP</h1>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="nav">
+      <a href="#" class="active">Home</a>
+      <a href="#">Shop</a>
+      <a href="#">Categories</a>
+      <a href="#">Pages</a>
+      <a href="#">Contact</a>
+    </nav>
+
+    <!-- Right Section -->
+    <div class="header-right">
+
+      <!-- Subscribe Button -->
+      <button class="subscribe-btn">
+        <i class="fas fa-envelope"></i> Subscribe
+      </button>
+
+      <!-- Icons -->
+      <div class="icons">
+        <a href="#" class="icon"><i class="fas fa-search"></i></a>
+        <a href="#" class="icon"><i class="fas fa-heart"></i><span class="badge">3</span></a>
+        <a href="#" class="icon"><i class="fas fa-shopping-cart"></i><span class="badge">5</span></a>
+      </div>
+
+      <!-- Admin Dropdown -->
+      <div class="admin-menu">
+        <button (click)="showCustomers()" class="admin-toggle">Admin
+        </button>
+      </div>
+
+      <!-- Mobile Menu Button -->
+      <button class="mobile-menu-btn">Menu</button>
+    </div>
+  </div>
+
+  <!-- Subscribe Popup (Optional Overlay) -->
+  <div class="subscribe-popup">
+    <div class="popup-content">
+      <span class="close-popup">×</span>
+      <h2>Get 10% OFF Your First Order!</h2>
+      <p>Subscribe to our newsletter and stay updated</p>
+      <form>
+        <input type="email" placeholder="Enter your email..." required>
+        <button type="submit">Subscribe Now</button>
+      </form>
+    </div>
+  </div>
+</header>

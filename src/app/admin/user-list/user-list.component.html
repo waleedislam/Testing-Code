@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admin - Subscribers List</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+      min-height: 100vh;
+      padding: 40px 20px;
+    }
+
+    .container {
+      max-width: 1100px;
+      margin: 0 auto;
+      height: 300px;
+      overflow-y: scroll;
+   
+    }
+
+    .page-title {
+      text-align: center;
+      font-size: 36px;
+      color: #222;
+      margin-bottom: 40px;
+      font-weight: 700;
+    }
+
+    .page-title i {
+      color: #b8860b;
+      margin-right: 15px;
+    }
+
+    table {
+      width: 100%;
+      background: white;
+      border-radius: 16px;
+      overflow: hidden;
+      box-shadow: 0 15px 35px rgba(0,0,0,0.1);
+      border-collapse: collapse;
+    }
+
+    thead {
+      background: linear-gradient(135deg, #b8860b, #d4a017);
+      color: white;
+      position: sticky;
+      top: 0;
+    }
+
+    thead th {
+      padding: 20px 15px;
+      text-align: left;
+      font-weight: 600;
+      font-size: 16px;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+
+    tbody tr {
+      transition: all 0.3s;
+      border-bottom: 1px solid #eee;
+    }
+
+    tbody tr:hover {
+      background-color: #fdf8e8;
+      transform: scale(1.01);
+      box-shadow: 0 8px 20px rgba(184,134,11,0.1);
+    }
+
+    tbody td {
+      padding: 18px 15px;
+      font-size: 15px;
+      color: #333;
+    }
+
+    .status {
+      padding: 8px 16px;
+      border-radius: 30px;
+      font-weight: 600;
+      font-size: 13px;
+      text-transform: uppercase;
+    }
+
+    .status.active {
+      background: #d4edda;
+      color: #155724;
+    }
+
+    .status.inactive {
+      background: #f8d7da;
+      color: #721c24;
+    }
+
+    .membership {
+      font-weight: 600;
+    }
+
+    .membership.monthly { color: #007bff; }
+    .membership.yearly  { color: #28a745; }
+
+    .username {
+      font-weight: 600;
+      color: #222;
+    }
+
+    .gender {
+      text-transform: capitalize;
+      color: #666;
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      table, thead, tbody, th, td, tr {
+        display: block;
+      }
+      thead tr { display: none; }
+      tr { margin-bottom: 20px; border-radius: 12px; overflow: hidden; }
+      td {
+        display: flex;
+        justify-content: space-between;
+        padding: 12px 20px;
+        border-bottom: 1px solid #ddd;
+      }
+      td::before {
+        content: attr(data-label);
+        font-weight: bold;
+        color: #b8860b;
+        width: 40%;
+      }
+    }
+  </style>
+</head>
+<body>
+  <h1 class="page-title">
+    <i class="fas fa-users"></i>
+    Subscribed Members
+  </h1>
+
+  <div class="container">
+
+    <table>
+      <thead>
+        <tr>
+          <th>Username</th>
+          <th>Membership</th>
+          <th>Gender</th>
+          <th>Status</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr  *ngFor="let u of userList">
+          <td class="username" data-label="Username">{{u.name}}</td>
+          <td class="membership yearly" data-label="Membership">{{u.subType}}</td>
+          <td class="gender" data-label="Gender">{{u.gender}}</td>
+          <td  class="status active" data-label="Status">{{u.status}}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+</body>
+</html>
