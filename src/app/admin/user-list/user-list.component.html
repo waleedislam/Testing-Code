@@ -1,20 +1,28 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Admin - Subscribers List</title>
+
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
   <style>
     * { margin: 0; padding: 0; box-sizing: border-box; }
     body {
       font-family: 'Poppins', sans-serif;
-      background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
-      min-height: 100vh;
+      height: unset;
       padding: 40px 20px;
     }
-
+  button{
+    width: 100px;
+    background: none;
+    border: none;
+    margin-left: 30px;
+     font-family: 'Poppins', sans-serif;
+     cursor: pointer;
+     border-radius: 20px;
+  }
+  button:hover{
+    background-color: black;
+    color: white;
+    transition: all 0.5s ease-in-out;
+    transform: scale(1.2);
+  }
     .container {
       max-width: 1100px;
       margin: 0 auto;
@@ -60,7 +68,6 @@
       text-transform: uppercase;
       letter-spacing: 1px;
     }
-
     tbody tr {
       transition: all 0.3s;
       border-bottom: 1px solid #eee;
@@ -134,7 +141,6 @@
       }
     }
   </style>
-</head>
 <body>
   <h1 class="page-title">
     <i class="fas fa-users"></i>
@@ -157,11 +163,11 @@
           <td class="username" data-label="Username">{{u.name}}</td>
           <td class="membership yearly" data-label="Membership">{{u.subType}}</td>
           <td class="gender" data-label="Gender">{{u.gender}}</td>
-          <td  class="status active" data-label="Status">{{u.status}}</td>
+          <td  class="status active" data-label="Status">{{u.status}}
+            <button (click)="showUserDetails(u)">Show Details</button>
+          </td>
+        
         </tr>
       </tbody>
     </table>
   </div>
-
-</body>
-</html>

@@ -1,0 +1,50 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>User Details</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <div *ngIf="selectedUser" class="user-card">
+    <div class="card-header">
+      <div class="avatar">
+        <i class="fas fa-user"></i>
+      </div>
+      <h2 class="username">{{selectedUser.name}}</h2>
+      <p class="user-id">#USR-2025-089</p>
+    </div>
+
+    <div class="card-body">
+      <div class="detail-row">
+        <span class="label"><i class="fas fa-user-tag"></i>User Name</span>
+        <span class="value">{{selectedUser.name}}</span>
+      </div>
+
+      <div class="detail-row">
+        <span class="label"><i class="fas fa-venus-mars"></i>Gender</span>
+        <span class="value">{{selectedUser.gender}}</span>
+      </div>
+
+      <div class="detail-row">
+        <span class="label"><i class="fas fa-circle-check"></i>Status</span>
+        <span class="value status active">{{selectedUser.status}}</span>
+      </div>
+
+      <div class="detail-row">
+        <span class="label"><i class="fas fa-crown"></i> Subscription</span>
+        <span class="value sub-type yearly">{{selectedUser.subType}}</span>
+      </div>
+    </div>
+
+    <div class="card-footer">
+      <p><i class="fas fa-calendar-alt"></i> Joined: March 15, 2025</p>
+    </div>
+  </div>
+
+</body>
+</html>

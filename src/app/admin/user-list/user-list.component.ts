@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { UserService } from '../../Services/user.service';
 import { CommonModule } from '@angular/common';
+import { User } from '../../Models/user';
 @Component({
   selector: 'app-user-list',
   standalone: true,
@@ -15,5 +16,7 @@ export class UserListComponent {
    ngOnInit(){
     this.userList=this.users.GetAllUsers();
    }
- 
+   showUserDetails(user:User){
+    this.users.OnShowUserDetails(user);
+   }
 }
